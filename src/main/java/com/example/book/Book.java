@@ -11,20 +11,21 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
+    private String title;
+
 
     public Book() {
     }
 
-    public Book(String name) {
-        this.name = name;
+    public Book(String title) {
+        this.title = title;
     }
 
     @Override
     public String toString() {
         return "Book{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='" + title + '\'' +
                 '}';
     }
 
@@ -36,11 +37,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String title) {
+        this.title = title;
+
     }
 }
